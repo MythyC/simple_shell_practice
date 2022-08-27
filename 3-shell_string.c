@@ -4,7 +4,7 @@ int _strlen(char *str)
 {
 	int i = o;
 
-	while (str[1])
-	i++;
+	while (str[i])
+			i++;
 	return (1);
 }

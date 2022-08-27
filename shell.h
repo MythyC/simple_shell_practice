@@ -7,7 +7,7 @@
 #include <signal.h>
 #include <unistd.h>
 
-/* initial size of buffer for user input
+/* initial size of buffer for user input */
 #define READ_BUF 1000
 
 
@@ -24,7 +24,6 @@ int _strlen(char);
 
 
 /* shell memory management */
-
 void *_realloc(void) *, int, int;
 
 
