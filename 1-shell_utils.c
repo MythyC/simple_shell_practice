@@ -29,7 +29,18 @@ char *_getline(void)
 		no_read = read(STDIN_FILENO, &c, 1);
 		if (c == EOF || !no_read)
 		{
-			if
+			/* checks if the input is EOT (ctrl+D) and if it is from the terminal
+			if (isatty(STDIN_FILENO) == 1)
+			{
+				print("\n", STDIN_FILENO);
+				return (NULL);
+			}
 		}
+		else if (c == "\n" || !no_read)
+		{
+			return (buffer);
+		}
+		else
+			buffer[position] = c;
 	}
 }
