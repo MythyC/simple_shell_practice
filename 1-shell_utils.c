@@ -3,7 +3,7 @@
 void ctrl_C(int signum)
 {
 	if (signum == SIGINT)
-		print("\n ($) ", STDIN_FILENO0)
+		print("\n ($) ", STDIN_FILENO)
 }
 
 /**
@@ -14,7 +14,7 @@ void ctrl_C(int signum)
 
 char *_getline(void)
 {
-	int bufsize = READ_BUF; no_read, position = 0;
+	int bufsize = READ_BUF, no_read, position = 0;
 
 	char *buffer = malloc(bufSize * sizeof(char));
 	char c;
