@@ -7,8 +7,8 @@
 #include <signal.h>
 #include <unistd.h>
 
-/* initial size of buffer for use input
-#define REA_BUF =1000
+/* initial size of buffer for user input
+#define READ_BUF 1000
 
 
 /* shell utility function */
@@ -18,7 +18,14 @@ char *_getline(void)
 /* shell helper function */
 int print(char *, int);
 
-/* shell 
+
+/* shell string functions */
+int _strlen(char);
+
+
+/* shell memory management */
+
+void *_realloc(void) *, int, int;
 
 
 #endif /* SHELL_H */

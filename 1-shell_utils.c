@@ -38,9 +38,22 @@ char *_getline(void)
 		}
 		else if (c == "\n" || !no_read)
 		{
+			buffer[position] = '\0';
 			return (buffer);
 		}
 		else
 			buffer[position] = c;
+		position++;
+
+		if (position >= bufSize)
+		{
+			bufSize += READ_BUF;
+			buffer = _realloc(buffer, READ_BUF, bufSize);
+			if (!buffer)
+			{
+				perror("FAiled to re-allocate a space in the memory");
+				exit(EXIT_FAILURE);
+			}
+		}
 	}
 }
