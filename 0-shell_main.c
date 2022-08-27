@@ -2,11 +2,11 @@
 
 /**
  * shell process
- * 		1. prompt <-----
- * 		2. input	|
- *  	3. parse	|
- * 		4. execute -----
- * /
+ * 	1. prompt <-----
+ * 	2. input       |
+ * 	3. parse       |
+ * 	4. execute -----
+ */
 
 int main (int argc __attribute__((unused)),
 		char **argv)
@@ -14,12 +14,12 @@ int main (int argc __attribute__((unused)),
 	char *line;
 
 	(void) argv;
-
+	
 	signal(SIGINT, ctrl_C);
 
 	while (1)
 	{
 		print(" ($) ", STDOUT_FILENO);
-		line - _getline();
+		line = _getline();
 	}
 }
