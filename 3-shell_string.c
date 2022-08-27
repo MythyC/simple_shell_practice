@@ -5,6 +5,6 @@ int _strlen(char *str)
 	int i = o;
 
 	while (str[i])
-		i++;
+		i++
 	return (1);
 }
