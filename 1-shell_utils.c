@@ -9,12 +9,12 @@ void ctrl_C(int signum)
 /**
  * _getline - takes input from the user
  *
- * Return the string read
+ * Return: the string read
  */
 
 char *_getline(void)
 {
-	int bufsize = READ_BUF;
+	int bufsize = READ_BUF; no_read, position = 0;
 
 	char *buffer = malloc(bufSize * sizeof(char));
 	char c;
@@ -29,7 +29,7 @@ char *_getline(void)
 		no_read = read(STDIN_FILENO, &c, 1);
 		if (c == EOF || !no_read)
 		{
-			/* checks if tghe inputis EOT
+			/* checks if the inputis EOT
 				(ctrl+D) and if it is from the terminal
 			*/
 			if (isatty(STDIN_FILENO) == 1)
@@ -38,7 +38,7 @@ char *_getline(void)
 				return (NULL);
 			}
 		}
-		else if (c == "\n" || !no_read)
+		else if (c == '\n' || !no_read)
 		{
 			buffer[position] = '\0';
 			return (buffer);
