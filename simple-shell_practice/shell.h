@@ -24,7 +24,7 @@ int _strlen(char);
 
 
 /* shell memory management */
-void *_realloc(void) *, int, int;
+void *_realloc(void *, int, int);
 
 
 #endif /* SHELL_H */
