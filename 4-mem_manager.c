@@ -1,33 +1,22 @@
 #include "shell.h"
 
-/**
- * step 1: allocate a temp memory with initial bufSize
- * step 2: copy from buff to tmp
- * step 3: free buff
- * step 4: 
- * step 5:
- * step 6: free tmp
- * step 7: return the new buff
- */
-
-void *_realloc(void *ptr, int aint b)
+void *_realloc(void *ptr, int oldsize, int newsize)
 {
-    if (a >= b)
-    {
-        perror("Failed to allocate memory");
-        exit(EXIT_FAILURE);
-    }
+    void *tmp;
+
     if (ptr == NULL)
     {
-        return (NULL);
+        tmp = malloc (newsize);
+        return (tmp);
     }
-    void *new;
-    new = malloc(b);
-    if (new == NULL)
+    else if (newsize == 0 && ptr != NULL)
     {
+        free(ptr);
         return (NULL);
     }
-    new = ptr;
+    else
+    {
 
-    return (new);
+    }
+
 }
