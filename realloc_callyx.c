@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * realloc - reallocates a new bloc of memory for a previous call by malloc
  * @ptr: a void pointer
