@@ -22,4 +22,4 @@ int main (int argc __attribute__((unused)),
 		print(" ($) ", STDOUT_FILENO);
 		line = _getline();
 	}
-}
+}}
