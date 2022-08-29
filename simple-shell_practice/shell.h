@@ -10,10 +10,11 @@
 /* initial size of buffer for user input */
 #define READ_BUF 1000
 
-
+#define DELIM "\a\t\n"
 /* shell utility function */
 void ctrl_C(int);
 char *_getline(void)
+char **tokenize(char *, const char *);
 
 /* shell helper function */
 int print(char *, int);
