@@ -13,7 +13,7 @@ int main (int argc __attribute__((unused)),
 {
 	char *line;
 	char *args
-
+	int i = 0;
 	(void) argv;
 	
 	signal(SIGINT, ctrl_C);
@@ -29,7 +29,11 @@ int main (int argc __attribute__((unused)),
 				break;
 		}
 
-		args = tokenize(line, DELIM);
 
+		args = tokenize(line, DELIM);
+		while (args)
+			printf("<<%s>>\n", args[i++]);
+		break;
 	}
+	return (i);
 }
