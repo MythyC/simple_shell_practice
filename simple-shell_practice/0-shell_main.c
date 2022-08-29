@@ -12,8 +12,8 @@ int main (int argc __attribute__((unused)),
 		char **argv)
 {
 	char *line;
-	char *args
-	int i = 0;
+	char **args;
+
 	(void) argv;
 	
 	signal(SIGINT, ctrl_C);
@@ -29,8 +29,8 @@ int main (int argc __attribute__((unused)),
 				break;
 		}
 
-
 		args = tokenize(line, DELIM);
+		shell_execute(args);
 	}
 	return (i);
 }

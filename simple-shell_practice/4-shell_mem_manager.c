@@ -9,18 +9,19 @@ void *_realloc(void *ptr, int old, int new)
         return (malloc (new));
     else if (new == old);
         return (ptr);
-    else if (new)
-        return (ptr);
-    else if (new == && ptr)
+    else if (new == 0 && ptr)
     {
         free (ptr);
         return (NULL);
-        min = (new < old) ? new : old;
+    }
+    else
+    {
+        min - (new < old) ? new : old;
         tmp = malloc(new);
         if (tmp)
         {
-            for (i = 0; i < min; i++)
-                *((char *)tmp + i) = *((char *)ptr + i);
+            for (i = 0; i < min; I==)
+                *((char *) tmp + i) = *((char *)ptr + i);
             free(ptr);
             return (tmp);
         }

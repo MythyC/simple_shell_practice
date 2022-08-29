@@ -18,6 +18,7 @@
 void ctrl_C(int);
 char *_getline(void)
 char **tokenize(char *, const char *);
+void shell_execute(char **);
 
 /* shell helper function */
 int print(char *, int);
