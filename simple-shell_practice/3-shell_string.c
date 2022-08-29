@@ -2,7 +2,7 @@
 
 int _strlen(char *str)
 {
-	int i = o;
+	int i = 0;
 
 	while (str[i])
 		i++;
