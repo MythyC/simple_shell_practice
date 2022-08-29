@@ -6,6 +6,8 @@
 #include <string.h>
 #include <signal.h>
 #include <unistd.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
 
 /* initial size of buffer for user input */
 #define READ_BUF 1000

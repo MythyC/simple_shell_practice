@@ -31,9 +31,6 @@ int main (int argc __attribute__((unused)),
 
 
 		args = tokenize(line, DELIM);
-		while (args)
-			printf("<<%s>>\n", args[i++]);
-		break;
 	}
 	return (i);
 }
