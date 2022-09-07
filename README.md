@@ -1,2 +1,3 @@
-# simple_shell_pratice
-for learning
+# Simple Shell Practice
+
+> for learning
